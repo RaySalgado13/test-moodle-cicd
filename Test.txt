@@ -1,2 +1,0 @@
-This is a test for testing active runner
-3
