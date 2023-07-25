@@ -14,3 +14,8 @@ jobs:
         - uses: actions/checkout@v2
         - name: Run a one-line script
           run: echo Hello, world! This is my first action on GitHub Actions with Self Hosted
+        - name: Move plugin floder to specific folder
+          run: |
+            cd actions-runner/local
+            mv actions-runner/moodle/test-moodle-cicd/test-moodle-cicd/aws/ .
+            echo moving directories... DONE
