@@ -17,5 +17,5 @@ jobs:
         - name: Move plugin floder to specific folder
           run: |
             cd /home/rayfi/actions-runner/local
-            mv actions-runner/moodle/test-moodle-cicd/test-moodle-cicd/aws/ .
+            mv /home/rayfi/actions-runner/local/actions-runner/moodle/test-moodle-cicd/test-moodle-cicd/aws/ .
             echo moving directories... DONE
