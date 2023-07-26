@@ -12,15 +12,14 @@ jobs:
     steps:
         # Checkout the repository code.
         - uses: actions/checkout@v2
-        - name: Run a one-line script
-          run: echo Hello, world! This is my first action on GitHub Actions with Self Hosted
+
         - name: Move plugin floder to specific folder
           run: |
-            echo $PWD
-            directory="local"
-            if [ ! -d "$directory" ]; then
-              mkdir "$directory"
-              echo "Directory \"$directory\" was created."
+            cd $HOME/actions-runner/
+            local_directory="local"
+            if [ ! -d "$local_directory" ]; then
+              mkdir "$local_directory"
+              echo "Directory \"$local_directory\" was created."
             fi
             cd $HOME/actions-runner/local
             cp -r $HOME/actions-runner/moodle/test-moodle-cicd/test-moodle-cicd/aws/ .
