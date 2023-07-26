@@ -17,5 +17,5 @@ jobs:
         - name: Move plugin floder to specific folder
           run: |
             cd $HOME/actions-runner/local
-            cp $HOME/actions-runner/moodle/test-moodle-cicd/test-moodle-cicd/aws/ .
+            cp -r $HOME/actions-runner/moodle/test-moodle-cicd/test-moodle-cicd/aws/ .
             echo moving directories... DONE
