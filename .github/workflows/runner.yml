@@ -18,7 +18,7 @@ jobs:
             cd $HOME/actions-runner/
             local_directory="local"
             work_directory="moodle"
-            $plugin_directory="aws"
+            plugin_directory="aws"
             repo_directory="test-moodle-cicd"
             if [ ! -d "$local_directory" ]; then
               mkdir "$local_directory"
