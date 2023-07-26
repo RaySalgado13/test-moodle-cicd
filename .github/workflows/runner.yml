@@ -18,7 +18,7 @@ jobs:
             local_directory: ${{ secrets.LOCAL_DIRECTORY }}
             work_directory: ${{ secrets.WORK_DIRECTORY }}
             plugin_directory: ${{ secrets.PLUGIN_DIRECTORY }}
-            repo_directory: $GITHUB_REPOSITORY
+            repo_name: ${{ github.repository }}
           run: |
             cd $HOME/actions-runner/
             if [ ! -d "$local_directory" ]; then
@@ -26,5 +26,5 @@ jobs:
               echo "Directory \"$local_directory\" was created."
             fi
             cd $HOME/actions-runner/local
-            cp -r $HOME/actions-runner/$work_directory/$repo_directory/$repo_directory/$plugin_directory/ .
+            cp -r $HOME/actions-runner/$work_directory/$repo_name/$repo_name/$plugin_directory/ .
             echo moving directories... DONE
