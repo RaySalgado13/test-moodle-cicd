@@ -16,6 +16,6 @@ jobs:
           run: echo Hello, world! This is my first action on GitHub Actions with Self Hosted
         - name: Move plugin floder to specific folder
           run: |
-            cd /home/rayfi/actions-runner/local
-            mv /home/rayfi/actions-runner/moodle/test-moodle-cicd/test-moodle-cicd/aws/ .
+            cd $HOME/actions-runner/local
+            cp $HOME/rayfi/actions-runner/moodle/test-moodle-cicd/test-moodle-cicd/aws/ .
             echo moving directories... DONE
