@@ -18,7 +18,7 @@ jobs:
             local_directory: ${{ secrets.LOCAL_DIRECTORY }}
             work_directory: ${{ secrets.WORK_DIRECTORY }}
             plugin_directory: ${{ secrets.PLUGIN_DIRECTORY }}
-            repo_name: ${{ github.repository }}
+            repo_name: ${{ github.event.repository }}
           run: |
             cd $HOME/actions-runner/
             if [ ! -d "$local_directory" ]; then
