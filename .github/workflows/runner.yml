@@ -15,9 +15,9 @@ jobs:
 
         - name: Move plugin directory to another required
           env: 
-            local_directory: ${{ secrets.LOCAL_DIRECTORY }}
-            work_directory: ${{ secrets.WORK_DIRECTORY }}
-            plugin_directory: ${{ secrets.PLUGIN_DIRECTORY }}
+            local_directory: ${{ vars.LOCAL_DIRECTORY }}
+            work_directory: ${{ vars.WORK_DIRECTORY }}
+            plugin_directory: ${{ vars.PLUGIN_DIRECTORY }}
             repo_name: ${{ github.event.repository.name }}
           run: |
             echo "$local_directory"
