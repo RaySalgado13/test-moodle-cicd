@@ -13,13 +13,14 @@ jobs:
         # Checkout the repository code.
         - uses: actions/checkout@v2
 
-        - name: Move plugin floder to specific folder
+        - name: Move plugin directory to another required
+          env: 
+            local_directory: ${{ secrets.LOCAL_DIRECTORY }}
+            work_directory: ${{ secrets.WORK_DIRECTORY }}
+            plugin_directory: ${{ secrets.PLUGIN_DIRECTORY }}
+            repo_directory: $GITHUB_REPOSITORY
           run: |
             cd $HOME/actions-runner/
-            local_directory="local"
-            work_directory="moodle"
-            plugin_directory="aws"
-            repo_directory="test-moodle-cicd"
             if [ ! -d "$local_directory" ]; then
               mkdir "$local_directory"
               echo "Directory \"$local_directory\" was created."
