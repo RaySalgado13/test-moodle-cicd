@@ -16,7 +16,7 @@ jobs:
           run: echo Hello, world! This is my first action on GitHub Actions with Self Hosted
         - name: Move plugin floder to specific folder
           run: |
-            directory = "local"
+            directory="local"
             if [ ! -d "$directory" ]; then
               mkdir "$directory"
               echo "Directory \"$directory\" was created."
