@@ -22,6 +22,6 @@ jobs:
             
             home_path=/bitnami/moodle
             local_path=$home_path/local
-            work_path=$home_path/actions-runner/$plugin_directory/_work/$repo_name/$plugin_directory
+            work_path=$home_path/actions-runner/$plugin_directory/_work/$repo_name/$repo_name/$plugin_directory
             cp -r  $work_path $home_path
             echo moving directories... DONE
