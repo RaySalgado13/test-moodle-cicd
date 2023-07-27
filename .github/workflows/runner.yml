@@ -24,5 +24,5 @@ jobs:
             work_path=$home_path/actions-runner/$plugin_directory
             cd $work_path
             cd $work_path/local
-            cp -r $workpath/$work_directory/$repo_name/$repo_name/$plugin_directory/ .
+            cp -r $workpath/$plugin_directory/work/$repo_name/$plugin_directory/ .
             echo moving directories... DONE
